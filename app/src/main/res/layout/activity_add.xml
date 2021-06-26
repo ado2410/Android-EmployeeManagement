@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape_round_shadow_bottom"
+        android:weightSum="1"
+        android:layout_weight="0.1">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/activity_add_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:clickable="true"
+            android:background="@null"
+            android:outlineProvider="none"
+            app:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:text="Thêm mới"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/activity_add_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:clickable="true"
+            app:backgroundTint="@color/purple_500"
+            app:srcCompat="@drawable/ic_add"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/activity_add_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                app:tint="@color/purple_500"
+                app:srcCompat="@drawable/ic_name" />
+
+            <EditText
+                android:id="@+id/activity_add_txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="Nhập tên"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_add_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_add_name"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                app:tint="@color/purple_500"
+                app:srcCompat="@drawable/ic_dob" />
+
+            <EditText
+                android:id="@+id/activity_add_txt_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="Nhập ngày sinh"
+                android:inputType="date"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_add_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_add_dob"
+            android:gravity="center_vertical">
+
+            <RadioGroup
+                android:id="@+id/activity_add_txt_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giới tính" />
+
+                <RadioButton
+                    android:id="@+id/activity_add_rb_gender_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Nam"
+                    android:textColor="@color/cardview_dark_background" />
+
+                <RadioButton
+                    android:id="@+id/activity_add_rb_gender_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Nữ"
+                    android:textColor="@color/cardview_dark_background" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_add_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_add_gender"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                app:tint="@color/purple_500"
+                app:srcCompat="@drawable/ic_job_position" />
+
+            <EditText
+                android:id="@+id/activity_add_txt_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="Nhập công việc"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_add_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_add_position"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                app:tint="@color/purple_500"
+                app:srcCompat="@drawable/ic_salary" />
+
+            <EditText
+                android:id="@+id/activity_add_txt_salary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="Nhập lương (USD)"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:tint="@color/purple_500"
+                app:srcCompat="@drawable/ic_name" />
+
+            <EditText
+                android:id="@+id/activity_add_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="Nhập tên"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:tint="@color/purple_500"
+                app:srcCompat="@drawable/ic_dob" />
+
+            <EditText
+                android:id="@+id/activity_add_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="Nhập ngày sinh"
+                android:inputType="date"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:tint="@color/purple_500"
+                app:srcCompat="@drawable/ic_gender" />
+
+            <RadioGroup
+                android:id="@+id/activity_add_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giới tính" />
+
+                <RadioButton
+                    android:id="@+id/activity_add_gender_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Nam"
+                    android:textColor="@color/cardview_dark_background" />
+
+                <RadioButton
+                    android:id="@+id/activity_add_gender_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Nữ"
+                    android:textColor="@color/cardview_dark_background" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:tint="@color/purple_500"
+                app:srcCompat="@drawable/ic_job_position" />
+
+            <EditText
+                android:id="@+id/activity_add_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="Nhập công việc"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:tint="@color/purple_500"
+                app:srcCompat="@drawable/ic_salary" />
+
+            <EditText
+                android:id="@+id/activity_add_salary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="Nhập lương (USD)"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+        </GridLayout>-->
+
+</LinearLayout>
